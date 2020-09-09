@@ -1,0 +1,106 @@
+body, html, ul {
+    padding: 0;
+    margin: 0;
+}
+
+.auth-form {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.auth-form h2 {
+    margin-bottom: 30px;
+}
+
+form ul li {
+    display: block;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+input {
+    padding: 10px;
+    width: 200px;
+}
+
+#email-error, #password-error {
+    display: none;
+}
+
+.flashed-messaged {
+    text-align: center;
+    padding: 10px;
+    max-width: 800px;
+    margin: 30px auto 0 auto;
+    border-radius: 8px;
+}
+
+/* index */
+
+.todo-list-wrapper {
+    max-width: 700px;
+    margin: 50px auto 0 auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    background: #065c6f;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+svg#svg-plus, svg#svg-close {
+    position: relative;
+    top: 7px;
+}
+
+svg#svg-close {
+    display: none;
+}
+
+.add-item, .items {
+    margin-top: 10px;
+    background: #065c6f;
+    color: white;
+    border-radius: 5px;
+}
+
+.add-item ul, .items ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0px;
+}
+
+.add-item ul li, .items ul li {
+    display: inline-block;
+}
+
+.add-item input[type="text"] {
+    width: 400px;
+    border-radius: 3px;
+    border: none;
+}
+
+.add-item form {
+    position: relative;
+    top: 7px;
+}
+
+svg#svg-tick {
+    margin-top: 12px;
+}
+
+.items ul {
+    padding: 10px;
+    margin-top: 0px;
+    border-bottom: 1px solid #faf3dd;
+}
+
+.items ul:last-child{
+    border-bottom: none;
+}

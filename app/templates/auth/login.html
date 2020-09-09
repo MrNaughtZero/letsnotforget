@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'include/styles.html' %}
+    <title>LetsNotForget - Login</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          LetsNotForget - Login
+        </a>
+    </nav>
+
+    <div class="flashed-messaged">
+        <h2>{{message[0]}}</h2>
+    </div>
+
+    <div class="auth-form">
+        <h2>Login</h2>
+        <form id="login-form" method="POST" action="/auth/login/attempt">
+            <ul>
+                <li>
+                    <input name="form-email" id="form-email" type="text" placeholder="Email" required>
+                </li>
+                <li>
+                    <input name="form-password" id="form-password" type="password" placeholder="Password" required>
+                </li>
+                <li>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </li>
+            </ul>
+        </form>
+
+    </div>
+</body>
+{% include 'include/scripts.html' %}
+</html>

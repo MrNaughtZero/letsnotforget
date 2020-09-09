@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include 'include/styles.html' %}
+    <title>LetsNotForget - Register</title>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          LetsNotForget - Register
+        </a>
+      </nav>
+
+    <div class="auth-form">
+        <h2>Create your free account</h2>
+        <form id="register-form" method="POST" action="/auth/register/user">
+            <ul>
+                <li>
+                    <input name="form-email" id="form-email" type="text" placeholder="Email" required>
+                </li>
+                <li>
+                    <input name="form-password" id="form-password" type="password" placeholder="Password" required>
+                </li>
+                <li>
+                    <button type="button" onclick="registerSubmit()" class="btn btn-primary">Submit</button>
+                </li>
+            </ul>
+        
+        
+        </form>
+
+        <div class="form-errors">
+            <h4 id="email-error">Email is not valid. Please enter a valid email</h4>
+            <h4 id="password-error">Password is not valid. Please enter a valid password. Mininum 8 charachters</h4>
+        </div>
+
+    </div>
+</body>
+{% include 'include/scripts.html' %}
+</html>
