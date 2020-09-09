@@ -21,10 +21,6 @@ def add_item(item):
 def delete_item(item):
     if not current_user.is_authenticated:
         return redirect(url_for('auth.login'))
-    try:
-        print(current_user.get_id())
-        print(item)
-        query = List().fetchItem(current_user.get_id(), item)
-        query.delete()
-    except Exception as e:
-        print(e)
+    query = List().fetchItem(current_user.get_id(), item)
+    query.delete()
+    
