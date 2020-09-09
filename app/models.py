@@ -44,6 +44,7 @@ class List(db.Model):
     def delete(self):
         db.session.delete(self)
         db.session.commit()
+    
     def update(self):
         db.session.commit()
 
@@ -51,6 +52,4 @@ class List(db.Model):
         return self.query.filter_by(userID=user).all()
 
     def fetchItem(self, user, text):
-        print(List.query.filter_by(userID=user, text=text).first())
-        input()
         return self.query.filter_by(userID=user, text=text).first()
